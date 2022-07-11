@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+    <ImageView
+        android:id="@+id/ivArticleImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clipToOutline="true"
+        tools:src="@drawable/test" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/playfairdisplay_bold"
+        android:maxLines="3"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivArticleImage"
+        app:layout_constraintTop_toTopOf="@+id/ivArticleImage"
+        tools:text="Make any change to display this text for user ad" />
+
+    <TextView
+        android:id="@+id/tvSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/notosansdisplay_bold"
+        android:textColor="#131313"
+        app:layout_constraintStart_toEndOf="@+id/ivArticleImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="News Title" />
+
+    <TextView
+        android:id="@+id/tvPublishedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/notosansdisplay_regular"
+        android:textColor="#595959"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ivArticleImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvSource"
+        tools:text="1 Week Ago" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

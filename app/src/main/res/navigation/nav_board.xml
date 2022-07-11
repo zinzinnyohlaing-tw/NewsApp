@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_board"
+    app:startDestination="@id/topNewsFragment">
+
+    <fragment
+        android:id="@+id/topNewsFragment"
+        android:name="eu.hanna.movieapp.fragment.TopNewsFragment"
+        android:label="fragment_top_news"
+        tools:layout="@layout/fragment_top_news" >
+        <action
+            android:id="@+id/action_topNewsFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bookMarkedFragment"
+        android:name="eu.hanna.movieapp.fragment.BookMarkedFragment"
+        android:label="fragment_book_marked"
+        tools:layout="@layout/fragment_book_marked" >
+        <action
+            android:id="@+id/action_bookMarkedFragment_to_bookMarkedDetailArticleFragment"
+            app:destination="@id/bookMarkedDetailArticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchNewsFragment"
+        android:name="eu.hanna.movieapp.fragment.SearchNewsFragment"
+        android:label="fragment_search_news"
+        tools:layout="@layout/fragment_search_news" >
+        <action
+            android:id="@+id/action_searchNewsFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="eu.hanna.movieapp.fragment.DetailArticleFragment"
+        android:label="fragment_detail_article"
+        tools:layout="@layout/fragment_detail_article" />
+    <fragment
+        android:id="@+id/bookMarkedDetailArticleFragment"
+        android:name="eu.hanna.movieapp.fragment.BookMarkedDetailArticleFragment"
+        android:label="fragment_book_marked_detail_article"
+        tools:layout="@layout/fragment_book_marked_detail_article" />
+</navigation>
